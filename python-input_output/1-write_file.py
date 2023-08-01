@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+'''Defines function called write_file
+'''
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+
+def write_file(filename="", text=""):
+    '''Writes text to filename
+
+    Args:
+       filename (str): The directory to the file being modified
+       text (str): The string written into filename.
+    '''
+    with open(filename, 'w', encoding="utf-8") as f:
+        size = f.write(text)
+    return size
