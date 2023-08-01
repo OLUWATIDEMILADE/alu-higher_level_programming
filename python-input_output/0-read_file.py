@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+'''Defines a function called read_file
+'''
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+
+def read_file(filename=""):
+    '''Reads a file and prints it out
+
+    Args:
+       filename (dir): The path to the file being read
+
+    Return: none
+    '''
+    with open(filename) as f:
+        for line in f:
+            print(line, end="")
